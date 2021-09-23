@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/x-icon" href="micks-favico-32x32-1.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Vistoria</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <style>   
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="header"></div><br />
+        <h2 id="msg"></h2>
+        <a href="lista.html" class="btn btn-secondary" role="button">Voltar</a>
+        <br/><br/>
+        <h3>Cadastrar Vistoria</h3>
+        <form>
+            <div class="form-group">
+                <label>Modelo</label>
+                <select class="form-control" id="modelo">
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Código do Veículo</label>
+                <select class="form-control" id="cod">
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Condutor</label>
+                <select class="form-control" id="condutor">
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Lataria</label>
+                <select class="form-control" id="lataria">
+                    <option disabled selected value>Selecione uma Opção</option>
+                    <option value="100">OK</option>
+                    <option value="90">Risco</option>
+                    <option value="80">Amassado</option>
+                    <option value="70">Risco e Amassado</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Motor</label>
+                <select class="form-control" id="motor">
+                    <option disabled selected value>Selecione uma Opção</option>
+                    <option value="100">OK</option>
+                    <option value="90">Água Baixa</option>
+                    <option value="80">Óleo Baixo</option>
+                    <option value="70">Óleo e Água Baixa</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Limpeza</label>
+                <select class="form-control" id="limpeza">
+                    <option disabled selected value>Selecione uma Opção</option>
+                    <option value="100">Ótimo</option>
+                    <option value="90">Bom</option>
+                    <option value="80">Regular</option>
+                    <option value="0">Péssimo</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Avaria Externa</label>
+                <select class="form-control" id="av_ext">
+                    <option disabled selected value>Selecione uma Opção</option>
+                    <option value="100">Ótimo</option>
+                    <option value="90">Bom</option>
+                    <option value="80">Regular</option>
+                    <option value="0">Péssimo</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Avaria Interna</label>
+                <select class="form-control" id="av_int">
+                    <option disabled selected value>Selecione uma Opção</option>
+                    <option value="100">Ótimo</option>
+                    <option value="90">Bom</option>
+                    <option value="80">Regular</option>
+                    <option value="0">Péssimo</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+              <label>Observações</label>
+              <textarea class="form-control" id="obs" rows="3"></textarea>
+            </div>
+        </form>
+        <button type="submit" onclick="salvar_alteracoes()" class="btn btn-primary">Cadastrar</button>
+        <h2 id="msg1"></h2>
+        <br/><br/>
+    </div>
+    <script type="text/javascript" src="cadastrar_vistoria.js"></script>
+</body>
+</html>

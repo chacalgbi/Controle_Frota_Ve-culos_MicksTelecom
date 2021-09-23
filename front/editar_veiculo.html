@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/x-icon" href="micks-favico-32x32-1.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Veículo</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script> 
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> 
+</head>
+<body>
+    <div class="container">
+        <div id="header"></div><br />
+        <h2 id="msg"></h2>
+        <a href="listar_veiculos.html" class="btn btn-secondary" role="button">Voltar</a>
+        <br/><br/>
+        <h3>Editar Veículo</h3>
+        <form>
+
+            <div class="form-group">
+                <label>Código</label>
+                <input class="form-control" id="codigo" />
+            </div>
+
+            <div class="form-group">
+                <label>Modelo</label>
+                <input class="form-control" id="modelo" />
+            </div>
+
+            <div class="form-group">
+                <label>Placa</label>
+                <input class="form-control" id="placa" />
+            </div>
+
+            <div class="form-group">
+                <label>Ano</label>
+                <input class="form-control" id="ano" />
+            </div>
+
+        </form>
+        <button type="submit" onclick="salvar_alteracoes()" class="btn btn-primary">Salvar Alterações</button>       
+    </div>
+    <script type="text/javascript" src="editar_veiculo.js"></script>
+</body>
+</html>
